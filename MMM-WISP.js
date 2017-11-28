@@ -125,7 +125,7 @@ Module.register("MMM-WISP", {
 			+ Math.round(WISP.temp_c) + "/"
 			+ Math.round(WISP.dewpoint_c) + " &nbsp &nbsp  "
 			+ Math.round(WISP.altim_in_hg) + "hg" + " &nbsp &nbsp  "
-			+ WISP.observation_time
+			+ moment(WISP.observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]")
 			; 
         top.appendChild(synopsis);
 		 
